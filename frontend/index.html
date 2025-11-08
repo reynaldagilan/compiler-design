@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compiler Design - Parser UI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Compiler Parser - Error Detection & Recovery</h1>
+            <p>Interactive visualization for parsing and error handling</p>
+        </header>
+        
+        <main>
+            <section class="parser-section">
+                <h2>Input Code</h2>
+                <textarea id="codeInput" placeholder="Paste your code here..."></textarea>
+            </section>
+            
+            <section class="parser-section">
+                <h2>Parse & Visualize</h2>
+                <button id="parseBtn">Parse Code</button>
+            </section>
+            
+            <section class="results-section">
+                <h2>Parse Results</h2>
+                <div id="results"></div>
+            </section>
+            
+            <section class="errors-section">
+                <h2>Errors & Recovery</h2>
+                <div id="errors"></div>
+            </section>
+        </main>
+    </div>
+    
+    <script src="../backend/parser.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
