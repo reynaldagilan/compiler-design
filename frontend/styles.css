@@ -1,0 +1,147 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header Styles */
+header {
+  background: linear-gradient(135deg, #1f6feb 0%, #388bfd 100%);
+  padding: 30px 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+header p {
+  font-size: 1.1em;
+  color: #e0e6ed;
+}
+
+/* Main Content */
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Section Styles */
+.parser-section,
+.results-section,
+.errors-section {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.parser-section:nth-child(3),
+.results-section,
+.errors-section {
+  grid-column: 1 / -1;
+}
+
+section h2 {
+  color: #1f6feb;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  border-bottom: 2px solid #1f6feb;
+  padding-bottom: 10px;
+}
+
+/* Textarea Styles */
+textarea {
+  width: 100%;
+  height: 200px;
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  color: #c9d1d9;
+  padding: 10px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.95em;
+  resize: vertical;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #1f6feb;
+  box-shadow: 0 0 0 3px rgba(31, 111, 235, 0.2);
+}
+
+/* Button Styles */
+button {
+  background-color: #1f6feb;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #388bfd;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(31, 111, 235, 0.3);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Results Display */
+#results,
+#errors {
+  background-color: #0d1117;
+  padding: 15px;
+  border-radius: 4px;
+  border-left: 4px solid #1f6feb;
+  min-height: 100px;
+  overflow-y: auto;
+  max-height: 300px;
+}
+
+#errors {
+  border-left-color: #f85149;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  
+  header h1 {
+    font-size: 1.8em;
+  }
+  
+  .parser-section:nth-child(3),
+  .results-section,
+  .errors-section {
+    grid-column: 1;
+  }
+}
